@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="six_axis_odrive_ros2_control" 
+    params="name 
+            odrive1_serial:=000000000001
+            odrive2_serial:=000000000002
+            odrive3_serial:=000000000003
+            joint1_name:=joint1
+            joint2_name:=joint2
+            joint3_name:=joint3
+            joint4_name:=joint4
+            joint5_name:=joint5
+            joint6_name:=joint6">
+
+    <ros2_control name="${name}_controller1" type="system">
+      <hardware>
+        <plugin>odrive_hardware_interface/ODriveHardwareInterface</plugin>
+      </hardware>
+
+      <sensor name="odrv1">
+        <param name="serial_number">${odrive1_serial}</param>
+      </sensor>
+
+      <joint name="${joint1_name}">
+        <param name="serial_number">${odrive1_serial}</param>
+        <param name="axis">0</param>
+        <param name="enable_watchdog">1</param>
+        <param name="watchdog_timeout">0.1</param>
+      </joint>
+
+      <joint name="${joint2_name}">
+        <param name="serial_number">${odrive1_serial}</param>
+        <param name="axis">1</param>
+        <param name="enable_watchdog">1</param>
+        <param name="watchdog_timeout">0.1</param>
+      </joint>
+    </ros2_control>
+
+    <ros2_control name="${name}_controller2" type="system">
+      <hardware>
+        <plugin>odrive_hardware_interface/ODriveHardwareInterface</plugin>
+      </hardware>
+
+      <sensor name="odrv2">
+        <param name="serial_number">${odrive2_serial}</param>
+      </sensor>
+
+      <joint name="${joint3_name}">
+        <param name="serial_number">${odrive2_serial}</param>
+        <param name="axis">0</param>
+        <param name="enable_watchdog">1</param>
+        <param name="watchdog_timeout">0.1</param>
+      </joint>
+
+      <joint name="${joint4_name}">
+        <param name="serial_number">${odrive2_serial}</param>
+        <param name="axis">1</param>
+        <param name="enable_watchdog">1</param>
+        <param name="watchdog_timeout">0.1</param>
+      </joint>
+    </ros2_control>
+
+    <ros2_control name="${name}_controller3" type="system">
+      <hardware>
+        <plugin>odrive_hardware_interface/ODriveHardwareInterface</plugin>
+      </hardware>
+
+      <sensor name="odrv3">
+        <param name="serial_number">${odrive3_serial}</param>
+      </sensor>
+
+      <joint name="${joint5_name}">
+        <param name="serial_number">${odrive3_serial}</param>
+        <param name="axis">0</param>
+        <param name="enable_watchdog">1</param>
+        <param name="watchdog_timeout">0.1</param>
+      </joint>
+
+      <joint name="${joint6_name}">
+        <param name="serial_number">${odrive3_serial}</param>
+        <param name="axis">1</param>
+        <param name="enable_watchdog">1</param>
+        <param name="watchdog_timeout">0.1</param>
+      </joint>
+    </ros2_control>
+
+  </xacro:macro>
+
+</robot>

@@ -25,6 +25,8 @@ find_package(backward_ros REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(moveit_visual_tools REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(odrive_hardware_interface REQUIRED)
+
 
 # find dependencies
 foreach(Dependency IN ITEMS ${HW_IF_INCLUDE_DEPENDS})

@@ -114,6 +114,7 @@ urdf.xacro与ros2_control的相同即可，moveit在需要机器人的urdf.xacro
 | `chomp_interface/CHOMPPlanner`                         | 
 | `stomp_interface/STOMPPlanner`                         | 
 | `pilz_industrial_motion_planner/CommandPlanner`        | 
+
 launch中可同时注册多个规划器插件
 ```
 .planning_pipelines(
