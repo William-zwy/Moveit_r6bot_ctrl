@@ -1,6 +1,6 @@
 # MOVEIT_R6BOT
 
-moveit应用在ros2_control_demo上，同时留了odrive接口
+moveit应用在ros2_control_demo上，同时留了odrive接口,项目基于Ubuntu22.04 ROS-Humble
 - 启动moveit以及仿真
 ```
 ros2 launch ctrl_rbot moveit_controller.launch.py 
