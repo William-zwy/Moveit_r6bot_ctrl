@@ -9,6 +9,10 @@ ros2 launch ctrl_rbot moveit_controller.launch.py
 ```
 ros2 run ctrl_rbot ctrl_rbot_node  
 ```
+- 已经加入odrive适配
+```
+odrive_muti.ros2_control.xacro
+```
 
 ## 一、项目流程图与效果
 
