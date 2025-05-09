@@ -16,9 +16,9 @@ odrive_muti.ros2_control.xacro
 
 ## 一、项目流程图与效果
 
-|流程图|
-|:-:|
-|![](.docs/moveit_controller.drawio.png)|
+|流程图|MOVEIT流程图|
+|:-:|:-:|
+|![](.docs/moveit_controller.drawio.png)|![](.docs/moveit.drawio.png)|
 
 |planning|
 |:-:|
